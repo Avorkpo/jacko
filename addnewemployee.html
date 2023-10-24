@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Manager</title>
+    <link rel="stylesheet" href="addnewemployee.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Manager</h1>
+        <div class="card">
+            <h2>Employee Details</h2>
+            <table id="employeeTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+               
+            </table>
+            <button onclick="showAddForm()">Add New</button>
+            <button onclick="printEmployeeTable()">Print</button>
+        </div>
+        <div class="card">
+            <h2>Number of Employees: <span id="employeeCount">0</span></h2>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <h2 id="modalTitle">Add New Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="editIndex" value="">
+                <label for="id">Employee ID:</label>
+                <input type="text" id="id" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="department">Department:</label>
+                <input type="text" id="department" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="addnewemployee.js"></script>
+</body>
+</html>

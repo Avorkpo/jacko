@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Manager</title>
+    <link rel="stylesheet" href="leave.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Leave Manager</h1>
+
+        <div class="card">
+            <h2>Leave Details</h2>
+            <table id="leaveTable">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Phone Number</th>
+                        <th>Reason for Leave</th>
+                        <th>Starting Date</th>
+                        <th>Ending Date</th>
+                        <th>Approved</th>
+                        <th>Entered Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="leaveTableBody"></tbody>
+            </table>
+        </div>
+
+        <button class="add-button" onclick="showModal('add')">Add New</button>
+
+        <div class="card">
+            <h2>Leave Statistics</h2>
+            <div class="leave-statistics">
+                <p>Total Leave Applications: <span id="totalLeaves">0</span></p>
+                <p>Total Approved Leaves: <span id="approvedLeaves">0</span></p>
+                <p>Total Pending Leaves: <span id="pendingLeaves">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="leaveModal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <h2 id="modalTitle">Add New Leave Application</h2>
+            <form id="leaveForm">
+                <input type="hidden" id="leaveId">
+                <label for="employeeId">Employee ID</label>
+                <input type="text" id="employeeId" required>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="department">Department</label>
+                <input type="text" id="department" required>
+
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" required>
+
+                <label for="reason">Reason for Leave</label>
+                <textarea id="reason" rows="3" required></textarea>
+
+                <label for="startingDate">Starting Date</label>
+                <input type="date" id="startingDate" required>
+
+                <label for="endingDate">Ending Date</label>
+                <input type="date" id="endingDate" required>
+
+                <label for="approved">Approved</label>
+                <select id="approved" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="button" id="cancelBtn" onclick="hideModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="leave.js"></script>
+</body>
+</html>

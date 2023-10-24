@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ 
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Employee Management System</span>
+      <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+       <li><a href="addnewemployee.html"><i class="fas fa-user-plus"></i> Add New Employee</a></li>
+      <li><a href="payroll.html"><i class="fas fa-money-check-alt"></i> Payroll Manager</a></li>
+      <li><a href="attendance.html"><i class="fas fa-calendar-check"></i> Attendance Manager</a></li>
+      <li><a href="leave.html"><i class="fas fa-calendar-times"></i> Leave Manager</a></li>
+      <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    
+    <nav class="navbar">
+      <button class="navbar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <div class="container">
+      
+      <center><h1>EMPLOYEE MANAGEMENT SYSTEM</h1></center>
+      <div class="grid">
+        
+        <a href="dashboard.html">
+          <div class="card">
+          <i class="fas fa-tachometer-alt"></i>
+          Dashboard
+        </div>
+      </a>
+
+      <a href="addnewemployee.html">
+      <div class="card">
+          <i class="fas fa-user-plus"></i>
+          Add New Eployee
+        </div>
+        </a>
+      
+     <a href="attendance.html">
+        <div class="card">
+          <i class="fas fa-clipboard-list"></i>
+          Attendance
+        </div>
+      </a>
+      <a href="leave.html">
+        <div class="card">
+          <i class="fas fa-calendar-alt"></i>
+          Leave
+        </div>
+      </a>
+      <a href="payroll.html">
+        <div class="card">
+          <i class="fas fa-money-bill-wave"></i>
+          Payroll
+        </div>
+      </a>
+      <a href="index.html">
+        <div class="card">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
